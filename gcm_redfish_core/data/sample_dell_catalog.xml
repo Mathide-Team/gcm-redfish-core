@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Manifest baseLocation="downloads.dell.com" baseLocationAccessProtocols="HTTPS">
+  <SoftwareComponent schemaVersion="2.0" identifier="a1" packageID="BIOS2K3" releaseID="BIOS2K3"
+                      hashMD5="0" path="FOLDER01/BIOS_1.45.EXE" dateTime="2024-01-10T00:00:00Z"
+                      releaseDate="January 10, 2024" vendorVersion="1.45" dellVersion="1.45"
+                      packageType="LWXP" size="0">
+    <Name><Display lang="en"><![CDATA[Dell PowerEdge DL380 Gen10 System BIOS,1.45]]></Display></Name>
+    <ComponentType value="BIOS"/>
+  </SoftwareComponent>
+
+  <SoftwareComponent schemaVersion="2.0" identifier="a2" packageID="BIOS2K4" releaseID="BIOS2K4"
+                      hashMD5="0" path="FOLDER01/BIOS_2.00.EXE" dateTime="2024-06-10T00:00:00Z"
+                      releaseDate="June 10, 2024" vendorVersion="2.00" dellVersion="2.00"
+                      packageType="LWXP" size="0">
+    <Name><Display lang="en"><![CDATA[Dell PowerEdge DL380 Gen10 System BIOS,2.00]]></Display></Name>
+    <ComponentType value="BIOS"/>
+  </SoftwareComponent>
+
+  <SoftwareComponent schemaVersion="2.0" identifier="a3" packageID="BIOS2K5" releaseID="BIOS2K5"
+                      hashMD5="0" path="FOLDER01/BIOS_2.36.EXE" dateTime="2025-02-01T00:00:00Z"
+                      releaseDate="February 1, 2025" vendorVersion="2.36" dellVersion="2.36"
+                      packageType="LWXP" size="0">
+    <Name><Display lang="en"><![CDATA[Dell PowerEdge DL380 Gen10 System BIOS,2.36]]></Display></Name>
+    <ComponentType value="BIOS"/>
+  </SoftwareComponent>
+
+  <SoftwareComponent schemaVersion="2.0" identifier="a4" packageID="IDRAC272" releaseID="IDRAC272"
+                      hashMD5="0" path="FOLDER02/IDRAC_2.72.EXE" dateTime="2024-03-01T00:00:00Z"
+                      releaseDate="March 1, 2024" vendorVersion="2.72" dellVersion="2.72"
+                      packageType="FRMW" size="0">
+    <Name><Display lang="en"><![CDATA[Dell iDRAC9 Firmware,2.72]]></Display></Name>
+    <ComponentType value="FRMW"/>
+  </SoftwareComponent>
+
+  <SoftwareComponent schemaVersion="2.0" identifier="a5" packageID="PERC710" releaseID="PERC710"
+                      hashMD5="0" path="FOLDER03/PERC_7.10.EXE" dateTime="2024-04-01T00:00:00Z"
+                      releaseDate="April 1, 2024" vendorVersion="7.10" dellVersion="7.10"
+                      packageType="FRMW" size="0">
+    <Name><Display lang="en"><![CDATA[Dell PERC H730P RAID Controller Firmware,7.10]]></Display></Name>
+    <ComponentType value="FRMW"/>
+  </SoftwareComponent>
+</Manifest>

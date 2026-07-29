@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Manifest><SoftwareComponent schemaVersion="3.0" releaseID="GMJVT" releaseDate="June 04, 2024" vendorVersion="00.2A.2C" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER11709413M/1/Firmware_GMJVT_WN64_00.2A.2C_A00.EXE" packageID="GMJVT" dateTime="2024-06-06T14:05:35-05:00" hashMD5="457be5d5c3db8bf008fb9a95266457e1" size="9275344" identifier="a74d5a0a-8045-462a-8b7e-020b645306b0" rebootRequired="true" hash="ff49c02ecb6a60050b958d0f2609992dfa387e06b5394e36a6be42577603ae73" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Artesyn 1400W PSU (PN: CYHHJ) Firmware Package</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="WC84H" releaseDate="March 29, 2024" vendorVersion="5.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER11440289M/1/Chassis-System-Management_Firmware_WC84H_WN64_5.0_A00.EXE" packageID="WC84H" dateTime="2024-03-29T15:21:18-05:00" hashMD5="da2fc03670351bcc09c16bc0315e6ebe" size="5582312" identifier="39eb85c0-21a8-43ef-bfa0-1b8782dff40e" rebootRequired="false" hash="bb7759d1fbcbc163cdf704afdfe604cb8834c307c9469c9507639fc90ff5d47d" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell product PowerEdge XR4000 Chassis Management firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="JDR1R" releaseDate="September 10, 2024" vendorVersion="2.3.5" dellVersion="2.3.5" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12080339M/1/BIOS_JDR1R_WN64_2.3.5.EXE" packageID="JDR1R" dateTime="2024-09-09T23:01:33-05:00" hashMD5="ae88de57eec72b12f22f3e48021f8728" size="27083544" identifier="f102c4af-369e-49de-b9ee-1099b929805a" rebootRequired="true" hash="f8d235706018b55cc7615ee5ec4958a40ea752ac0e7c2d058a51cc32435794d4" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Server PowerEdge BIOS Version 2.3.5</Display>
+    </Name>
+    <ComponentType value="BIOS">
+      <Display lang="en">BIOS</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="6H0W5" releaseDate="January 09, 2026" vendorVersion="2.15" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14058833M/1/Chassis-System-Management_Firmware_6H0W5_WN64_2.15_A00.EXE" packageID="6H0W5" dateTime="2026-01-09T01:35:28-06:00" hashMD5="e025c4609b61fffbe8806b1b3d0a8c05" size="5534080" identifier="056c5f80-5e29-469f-b783-ea7fabc79e9a" rebootRequired="false" hash="fdee22f4b8484fdfa52711b2facc9b148712d42e2728b6f26ee5101c29077ca4" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell product PowerEdge Chassis Management firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="KMDGP" releaseDate="July 01, 2025" vendorVersion="2.2.13.2037" dellVersion="A02" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13366141M/1/BOSS_Firmware_KMDGP_WN64_2.2.13.2037_A02.EXE" packageID="KMDGP" dateTime="2025-07-10T05:56:11-05:00" hashMD5="0f046ff620766775320d9d003254ef66" size="18372512" identifier="d2d21adc-d9f8-48f3-ab95-f3bd79c3e9b8" rebootRequired="true" hash="2e0118fec84bdf3ed85f2ab55f1c09c43549e19bbb9f7b601b796bbd081c117d" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">BOSS-N1 Modular DC-MHS Firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="PT96P" releaseDate="November 24, 2025" vendorVersion="25.11.05" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13926769M/1/XR8720T_Drivers-for-OS-Deployment_Application_PT96P_WN64_25.11.05_A00.EXE" packageID="PT96P" dateTime="2025-12-01T05:12:52-06:00" hashMD5="baa397185f85ce8525612979bcf82f70" size="25846048" identifier="252a35f5-4af2-4f48-abe1-1ed61988e135" rebootRequired="false" hash="d2af6bddfebaf2b3c67d286da08a19aff45204a673b31bb733b947c733d46c7a" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell OS Driver Pack</Display>
+    </Name>
+    <ComponentType value="APAC">
+      <Display lang="en">Application</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="MG1RW" releaseDate="December 11, 2025" vendorVersion="4303A53" dellVersion="4303.53" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13978249M/1/XR8720T_Diagnostics_Application_MG1RW_WN64_4303A53_4303.53.EXE" packageID="MG1RW" dateTime="2025-12-12T13:45:02-06:00" hashMD5="909cadf1c2c62195447930b0d3ce6397" size="19094000" identifier="00e7ac12-32e4-47d2-90ee-ef458a91a5a4" rebootRequired="false" hash="3efdfc5433d51183ec9eb493c015f25b1f6519b017e52d7d43d9890ff71ab70a" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell 64 Bit uEFI Diagnostics, version 4303</Display>
+    </Name>
+    <ComponentType value="APAC">
+      <Display lang="en">Application</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="060GK" releaseDate="April 02, 2026" vendorVersion="30.5.0.54" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14400549M/1/XR8720T_Network_Firmware_060GK_WN64_30.5.0.54_A00.EXE" packageID="060GK" dateTime="2026-04-08T08:25:30-05:00" hashMD5="a8791b39a5c22cb8a2d7df20b69b24fd" size="60723984" identifier="31ddbb1b-b616-4bd8-ba9f-3c53810b9f18" rebootRequired="true" hash="63ef81c1353078846c757cc4ad18c017b596183fd91846397cf007437b73ccd9" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Intel NIC Firmware Release 30.5 for Intel E830 Adapter and Intel E825 LOM</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="JHKXR" releaseDate="September 02, 2025" vendorVersion="1.4.0" dellVersion="A03" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13518113M/2/Express-Flash-PCIe-SSD_Firmware_JHKXR_WN64_1.4.0_A03_01.EXE" packageID="JHKXR" dateTime="2025-10-08T05:13:10-05:00" hashMD5="0ce3c8c2af7d2d1d7aacfe02075b4c5a" size="18728752" identifier="59ded4d2-dfa8-4786-8e3e-b49a0125eae6" rebootRequired="true" hash="67b7f289cb942a094f6ee9f4501a8e225f3d745c9e102eec3c4b8698129dd4fa" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe 7450 M.2 SSD GEN4 (RI\MU) ISE Firmware release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="YJG7C" releaseDate="August 19, 2025" vendorVersion="1.3.1" dellVersion="A01" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13708213M/1/Express-Flash-PCIe-SSD_Firmware_YJG7C_WN64_1.3.1_A01.EXE" packageID="YJG7C" dateTime="2025-10-07T01:37:23-05:00" hashMD5="018f60df4614609a9f389618ba3e3b09" size="22934480" identifier="e6afd345-0f97-4172-8754-002fcd2f6d4c" rebootRequired="true" hash="7bc49572cb35981ed7c2a40959a087253718a80e5aee0fb4971ccb9bb166576a" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Hynix 1.3.1 FW for PE90X0 NVMe ISE drive program for model number HFS480GEJ8X167N, HFS800GEJ8X167N, HFS960GEJ8X167N, HFS1T9GEJ8X167N.HFS1T9GEJ8X167N</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="9883M" releaseDate="June 09, 2026" vendorVersion="1.2.4" dellVersion="1.2.4" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14643319M/1/XR8720T_BIOS_9883M_WN64_1.2.4.EXE" packageID="9883M" dateTime="2026-06-09T03:50:26-05:00" hashMD5="45f964990294d6ecb7848e752d4673c8" size="34451176" identifier="e23941e0-75cf-41c6-bb0c-be82e7781e59" rebootRequired="true" hash="a9d0f0d9fd9c56867480178368dace5ffe2c363415a71e8b5b1be44d4bc1375c" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Server PowerEdge XR8720t BIOS Version 1.2.4</Display>
+    </Name>
+    <ComponentType value="BIOS">
+      <Display lang="en">BIOS</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="D1R57" releaseDate="January 29, 2026" vendorVersion="1.0.2.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14145952M/1/XR8720T_Firmware_D1R57_WN64_1.0.2.0_A00.EXE" packageID="D1R57" dateTime="2026-01-29T03:12:50-06:00" hashMD5="5e4093666257209c1b0f0a2bb7776767" size="5216096" identifier="f1828439-f06d-40bd-9299-4285db91b947" rebootRequired="false" hash="8968a78bb425d8e5ac746a7d762f2ef063a0b4b1a4f1a73020eb6f74a311e8b8" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell PowerEdge XR8720t Heater Manager firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="0MKY1" releaseDate="April 17, 2026" vendorVersion="2.16" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14444189M/1/Chassis-System-Management_Firmware_0MKY1_WN64_2.16_A00.EXE" packageID="0MKY1" dateTime="2026-04-16T21:44:44-05:00" hashMD5="af9533764b309b2fc4ea00fc700f17b1" size="5540008" identifier="0a8215ba-943a-4a50-bfdc-4415bfa58d4f" rebootRequired="false" hash="7570a7e587c3c15f196e1fefb4e7f32ae671d2a36e3602485b99053058012f8d" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell product PowerEdge Chassis Management firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="RXKJ5" releaseDate="February 17, 2026" vendorVersion="2.2.0.1" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14217017M/1/Systems-Management_Application_RXKJ5_WN64_2.2.0.1_A00.EXE" packageID="RXKJ5" dateTime="2026-02-17T00:58:16-06:00" hashMD5="98bd636e3b806f6fb0820a6abf4c26bf" size="23974096" identifier="bceac98e-b8e5-469e-b942-7d4147f4a89f" rebootRequired="false" hash="7ffa258528a5fbd0e1d5fe49e8d4109b9ff9bdb26500e98f7359b8acedb0b4a0" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">DELL System Update, v.2.2.0.1</Display>
+    </Name>
+    <ComponentType value="APAC">
+      <Display lang="en">Application</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="RJG30" releaseDate="May 26, 2026" vendorVersion="1.30.33.10" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14593081M/1/XR8720T_iDRAC-with-Lifecycle-Controller_Firmware_RJG30_WN64_1.30.33.10_A00.EXE" packageID="RJG30" dateTime="2026-05-26T04:46:34-05:00" hashMD5="60ed8c3050e1d49d551125a5ebf23cc6" size="354816400" identifier="6f81206e-c509-4f03-9167-d53f05de974b" rebootRequired="false" hash="e7e391488fa0bbad4546408fcb65f10cd58f040cba54e4cde0af3ac263c3a3f4" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">iDRAC 1.30.33.10</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="238XW" releaseDate="January 29, 2026" vendorVersion="6.1.0.0" dellVersion="A01" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14150944M/1/Systems-Management_Application_238XW_WN64_6.1.0.0_A01.EXE" packageID="238XW" dateTime="2026-01-30T01:36:13-06:00" hashMD5="a731fb10a327171a556c4be1102090d7" size="29570432" identifier="a2e58565-7b28-42b2-9717-a7fcf5c05175" rebootRequired="false" disableSupportedSystemDisplay="true" hash="2fa94d861dd7efd7aa3a503eb59da8b324f25545382f66b2bc2cc5bd33d6aa1a" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell iDRAC Service Module Installer for OS DUP, v6.1.0.0</Display>
+    </Name>
+    <ComponentType value="APAC">
+      <Display lang="en">Application</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="HCXF3" releaseDate="January 23, 2025" vendorVersion="30.0.0.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12597518M/3/Network_Driver_HCXF3_WN64_30.0.0.0_A00_01.EXE" packageID="HCXF3" dateTime="2025-06-20T04:32:48-05:00" hashMD5="d0d17e9641589d7699b82d9852e38350" size="46928304" identifier="b8e81ba9-4f39-43c5-b60e-67e89ce6f196" rebootRequired="false" hash="b43b942d92446cde40af82616ebf20437cc2b6597e631b0c4455512afe733c43" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Intel NIC Drivers, Release Version 30.0, for Windows 64-bit Operating Systems</Display>
+    </Name>
+    <ComponentType value="DRVR">
+      <Display lang="en">Driver</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="0NT62" releaseDate="April 24, 2026" vendorVersion="26.04.05" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14480271M/1/Drivers-for-OS-Deployment_Application_0NT62_WN64_26.04.05_A00.EXE" packageID="0NT62" dateTime="2026-04-27T09:42:09-05:00" hashMD5="4cc089316ed57ceb296f7ae8fc315b81" size="48258672" identifier="ec98aa04-02a2-4e4b-86a1-91773630b4e0" rebootRequired="false" hash="5588be63045ac3980f1795692db07f27438cbc6f1094dc313213a983a07fedc1" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell OS Driver Pack</Display>
+    </Name>
+    <ComponentType value="APAC">
+      <Display lang="en">Application</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="GDT3C" releaseDate="April 13, 2026" vendorVersion="2.2.13.2038" dellVersion="A05" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14431646M/1/BOSS_Firmware_GDT3C_WN64_2.2.13.2038_A05.EXE" packageID="GDT3C" dateTime="2026-04-15T01:22:17-05:00" hashMD5="cdcd4802b6ec6a4ae26dd902e8dc89dc" size="15947952" identifier="82101406-9eb8-4835-8220-012ffc2f1316" rebootRequired="true" hash="7eadd550b59235d5eb78564ed4fe6551187c16ff71aee1125aac8f8b12222a39" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">BOSS-N1 DC-MHS Firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="HVJ8X" releaseDate="September 16, 2025" vendorVersion="4303A51" dellVersion="4303.51" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13651723M/2/Diagnostics_Application_HVJ8X_WN64_4303A51_4303.51.EXE" packageID="HVJ8X" dateTime="2025-09-18T21:58:08-05:00" hashMD5="05a6f02f304b64e8650239e8b2c13fa3" size="19121000" identifier="a5561d41-9f1b-40ed-9625-8f946a0c277c" rebootRequired="false" hash="801d0d6600d6f0db70e3d6fff1b37723786b622e0963e49e9f47d029aabb04b1" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell 64 Bit uEFI Diagnostics, version 4303</Display>
+    </Name>
+    <ComponentType value="APAC">
+      <Display lang="en">Application</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="7T11K" releaseDate="February 25, 2026" vendorVersion="28.48.1000" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14350936M/1/Network_Firmware_7T11K_WN64_28.48.1000_A00.EXE" packageID="7T11K" dateTime="2026-03-26T11:57:10-05:00" hashMD5="331a2e245a42fcf326fe39fb79f2bf7f" size="60956256" identifier="677a61fa-f6fa-474f-9e43-7382fc61baad" rebootRequired="true" hash="b50646f09e747e696aaeff35eb4daac60f5241b27a8874907570d85dfe922014" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">NVIDIA Mellanox Firmware Release 28.48.1000 for the Industry-Standard NVIDIA Mellanox ConnectX-7 NDR Adapters</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="FW43N" releaseDate="January 09, 2025" vendorVersion="2.0.2" dellVersion="A01" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12549106M/2/Express-Flash-PCIe-SSD_Firmware_FW43N_WN64_2.0.2_A01_01.EXE" packageID="FW43N" dateTime="2025-06-20T05:58:02-05:00" hashMD5="928048df88cb8475fb66b92eea9ad97b" size="29842576" identifier="28d7ec2d-7fb2-4402-9645-8d2514a5551b" rebootRequired="false" hash="ac0f4f6f6e6332e032c7a947babda7223e4caa4eb840b73d6ac7753a785123c2" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PCIe SSD CD8P E3.S ISE Firmware Maintenance Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="0M4TD" releaseDate="November 18, 2025" vendorVersion="1.92" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13878591M/2/Firmware_0M4TD_WN64_1.92_A00_01.EXE" packageID="0M4TD" dateTime="2026-01-20T23:13:52-06:00" hashMD5="8d8dc22d92f29b0f6b57cefacbffab84" size="20027320" identifier="7eb0f44e-e445-481b-b479-035fd50f6b7f" rebootRequired="false" hash="3de4482f165aad5a8d42d65a08ee2bc47038dc0fa6f826d0ef10af1123d457a6" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Passive Backplane Firmware for 17th Generation PowerEdge 1U Servers</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="1W7Y8" releaseDate="May 19, 2026" vendorVersion="1.0.2" dellVersion="A01" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14568456M/1/Express-Flash-PCIe-SSD_Firmware_1W7Y8_WN64_1.0.2_A01.EXE" packageID="1W7Y8" dateTime="2026-05-19T16:29:53-05:00" hashMD5="44cd9f4e058da97f8671c5b902fba92b" size="29331064" identifier="22a0e201-8b06-4a49-be88-e09d490490ed" rebootRequired="false" hash="836952ed4fc5182476429b89521d155f8c4d80acfcb4e823d18fe0f720577837" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Datacenter NVMe RI AG ISE E3.S Gen5 Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="0822W" releaseDate="November 03, 2025" vendorVersion="2.0.4" dellVersion="A03" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14049080M/1/Express-Flash-PCIe-SSD_Firmware_0822W_WN64_2.0.4_A03.EXE" packageID="0822W" dateTime="2026-01-07T11:36:56-06:00" hashMD5="a45031aa58ec8b33be45eaa10342779d" size="29004456" identifier="99fddeb1-0638-46d1-8ef1-4e2e84818b6c" rebootRequired="false" hash="3c2ec8bfc9484db346bd990ab530720f6ddd7c45e81a62e702b368643d1bb60b" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PCIe SSD CM7 E3.S ISE Firmware Maintenance Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="TF40J" releaseDate="February 26, 2026" vendorVersion="40.48.1000" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14350931M/1/Network_Firmware_TF40J_WN64_40.48.1000_A00.EXE" packageID="TF40J" dateTime="2026-03-26T11:56:35-05:00" hashMD5="585332d0f7c32cd62aaa7123308f06d2" size="50943200" identifier="f958f44a-5a6d-4ba2-9fb7-2505ca0faec1" rebootRequired="true" hash="9a70e353e6ed06f823bea0ca402b8306e15d3c7973ebc726ae0778d5f437653a" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">NVIDIA Mellanox Firmware Release 40.48.1000 for the Industry-Standard NVIDIA Mellanox ConnectX-8 XDR Adapters</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="T23FF" releaseDate="March 28, 2026" vendorVersion="36.11.73.00" dellVersion="36.11.73.00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14357267M/1/Network_Firmware_T23FF_WN64_36.11.73.00.EXE" packageID="T23FF" dateTime="2026-03-28T13:46:34-05:00" hashMD5="f69c40b591cdf40bf5ab2bf8e24e9dc8" size="19886608" identifier="7af5e00a-9ef6-4b5c-bfe7-4d714edd7e91" rebootRequired="false" hash="feb89ba9266021c69a381ebf4311f5f9381e287080d8916820470493216be1b1" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Broadcom 57608 Network Device Firmware (Dell) 23.6</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="0DT1G" releaseDate="October 02, 2025" vendorVersion="7.2.4.1" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13658502M/2/Security_Firmware_0DT1G_WN64_7.2.4.1_A00_01.EXE" packageID="0DT1G" dateTime="2025-10-23T12:36:25-05:00" hashMD5="1741654f5b80611b85a7f7c47dcadc50" size="22232840" identifier="3e8bbacd-16fe-44f0-a83f-e0242b7e9216" rebootRequired="true" hash="04170aba081f3c9c0a8e73aec1b6f30b2475218c8985ad107047fc76710664bc" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell PowerEdge 17G (&amp; 17G-derived systems) Trusted Platform Module 2.0 Firmware 7.2.4.1</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="FF94T" releaseDate="March 28, 2026" vendorVersion="236.1.173.0" dellVersion="236.1.173.0" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14357284M/1/Network_Firmware_FF94T_WN64_236.1.173.0.EXE" packageID="FF94T" dateTime="2026-03-28T13:48:23-05:00" hashMD5="bb9b765d1e9e2ab139b2a5abbf4caba6" size="55986592" identifier="74088e29-fafa-42e3-a5b3-c3f9ad5539d6" rebootRequired="true" hash="25757a1c146c4c1376e70141b18343e9cdee4b4d3ca7b446cb11e277e72311e0" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Broadcom 5741X/5760X Network Device Firmware (Industry) 23.6</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="X5N4T" releaseDate="May 04, 2026" vendorVersion="1.7.6" dellVersion="1.7.6" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14504542M/1/BIOS_X5N4T_WN64_1.7.6.EXE" packageID="X5N4T" dateTime="2026-05-04T04:34:56-05:00" hashMD5="c580b6ea8e6d8fccbce22cb56ed27d01" size="31553456" identifier="fe3c3e0e-3683-416b-b8e8-0f0daec51ce2" rebootRequired="true" hash="e2a8c65dc530c39f9dca4fcd4c5798574bd74225f118c869c411347cbf02cba1" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Server PowerEdge R7725/R6725/R7725xd/M7725/XE7745 BIOS Version 1.7.6</Display>
+    </Name>
+    <ComponentType value="BIOS">
+      <Display lang="en">BIOS</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="0WM7T" releaseDate="February 26, 2026" vendorVersion="22.48.1000" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14350885M/1/Network_Firmware_0WM7T_WN64_22.48.1000_A00.EXE" packageID="0WM7T" dateTime="2026-03-26T11:51:00-05:00" hashMD5="b339fee5bc00f8db2c3f27a1527c4082" size="40378984" identifier="1ae87aff-e6d5-499f-98e9-1e1a4bf12bb4" rebootRequired="true" hash="3c5ca93be4a0cf561f9603be92dc4d39ae721b43d688df3aec246744f28acbac" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">NVIDIA Mellanox Firmware Release 22.48.1000 for the Industry-Standard NVIDIA Mellanox ConnectX-6 DX Ethernet Adapters</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="6CG66" releaseDate="April 25, 2025" vendorVersion="232.1.141.4" dellVersion="232.1.141.4" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12918562M/3/Network_Firmware_6CG66_WN64_232.1.141.4_01.EXE" packageID="6CG66" dateTime="2025-05-13T13:51:18-05:00" hashMD5="8d8d74bf30cc52b8828d89f6639b7a78" size="19846952" identifier="b3c134be-7539-4a7a-82e0-0fff1c0f637f" rebootRequired="true" hash="044372cdeafdfcab5124ac4c91278381656b8bd16e6bd7a3e0510b320ae4f40f" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Broadcom 5719 Network Device Firmware (Industry) 23.2.1</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="G8JGK" releaseDate="September 26, 2024" vendorVersion="26.42.1000" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12018087M/3/Network_Firmware_G8JGK_WN64_26.42.1000_A00_01.EXE" packageID="G8JGK" dateTime="2025-10-07T10:29:12-05:00" hashMD5="10262abcccb68fc0fad5f7ed17172bb3" size="26972112" identifier="427ba6a2-9628-41de-8df3-7381ee8d6f09" rebootRequired="true" hash="80d23e132aeb72f1008fb4fc1c8e6c8419aba9572b03a2d5b52a1cca1038f887" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Mellanox ConnectX-6 LX Ethernet Adapter Firmware</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="11F63" releaseDate="May 26, 2026" vendorVersion="1.30.30.50" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14593050M/1/iDRAC-with-Lifecycle-Controller_Firmware_11F63_WN64_1.30.30.50_A00.EXE" packageID="11F63" dateTime="2026-05-26T04:36:19-05:00" hashMD5="e934b506399bf98e9bbcff235e0d5593" size="354805152" identifier="7019eb3e-a283-420a-95dd-f21b032d4f66" rebootRequired="false" hash="41eee7c0aaccb6388bce43281886f823312f876710d2258905b9952528dd6d61" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">iDRAC 1.30.30.50</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="WHGGM" releaseDate="December 16, 2025" vendorVersion="1.1.0" dellVersion="A01" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13989869M/1/Express-Flash-PCIe-SSD_Firmware_WHGGM_WN64_1.1.0_A01.EXE" packageID="WHGGM" dateTime="2025-12-16T09:33:37-06:00" hashMD5="d88ddc1d10829b2f06278df3e03deb5f" size="32600864" identifier="de81607d-261a-4b28-8e90-bfcf306ec430" rebootRequired="false" hash="e7c267e73370c9665b97daf8d9711ce478390d8da1788dda3f44cf96609df2e7" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PS10X0 E3.S ISE PCIe SSD Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="HTH2Y" releaseDate="November 21, 2025" vendorVersion="3.0.4" dellVersion="A03" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13901980M/1/Express-Flash-PCIe-SSD_Firmware_HTH2Y_WN64_3.0.4_A03.EXE" packageID="HTH2Y" dateTime="2025-11-23T16:32:26-06:00" hashMD5="58f9abe5c107861156f6779549020a1a" size="29143760" identifier="716b39b5-7ad0-4974-84e8-1f1f15130010" rebootRequired="false" hash="6b4640bccb23bf0da45a5aa00a258c07fd10418fda6bae08139750f5a6f191b3" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PCIe SSD CM7 E3.S FIPS Firmware Maintenance Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="4P5K1" releaseDate="July 03, 2024" vendorVersion="2.5.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER11804735M/1/Express-Flash-PCIe-SSD_Firmware_4P5K1_WN64_2.5.0_A00.EXE" packageID="4P5K1" dateTime="2024-07-03T08:05:39-05:00" hashMD5="b1dba61ac516779604a2c5c300f604ea" size="7724464" identifier="c5b57eb9-d13b-4cae-a8b1-69dcf3961504" rebootRequired="false" hash="474f89137c83d3f12b5dcd04fb3866cf8f08f2e2119209aa5a860a69b3b16ceb" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell EC NVMe FIPS 7400 RI M.2 2.5.0 MTFDKBA480TDZ, MTFDKBA960TDZ,MTFDKBA800TFC,MTFDKBG1T9TDZ,MTFDKBG3T8TDZ,MTFDKBG960TDZ.</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="7P6P5" releaseDate="November 18, 2025" vendorVersion="1.92" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13878618M/2/Firmware_7P6P5_WN64_1.92_A00_01.EXE" packageID="7P6P5" dateTime="2026-01-20T23:19:28-06:00" hashMD5="c430803c17b32f3d4400b1b780170432" size="20027232" identifier="5a87e801-aa96-4224-a988-1ae0ee43216d" rebootRequired="false" hash="7d71a1f6831a8b1efb7755c9e04b824d23a0b078c543ce859b2c65e3e454bd58" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Passive Backplane Firmware for 17th Generation PowerEdge 2U Servers</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="VJXKC" releaseDate="January 09, 2026" vendorVersion="1.0.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14057449M/1/Express-Flash-PCIe-SSD_Firmware_VJXKC_WN64_1.0.0_A00.EXE" packageID="VJXKC" dateTime="2026-01-08T22:07:55-06:00" hashMD5="0ba6f1bd7fd15a98f85d634ab091510b" size="30405520" identifier="948bd2dc-30ea-4ce3-a551-8d94ed9e7a73" rebootRequired="false" hash="122d76dfb878d9dc179128759f95d6569ec754e2a12528562c98a330894594be" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PCIe SSD 7600 U.2 ISE Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="V7R69" releaseDate="February 25, 2025" vendorVersion="1.0.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12887923M/1/Express-Flash-PCIe-SSD_Firmware_V7R69_WN64_1.0.0_A00.EXE" packageID="V7R69" dateTime="2025-03-20T12:21:21-05:00" hashMD5="32978c6c0ac7165a67b3eb3f0cfef098" size="28814352" identifier="3ac94a22-476b-4a4c-a1f4-abfb1e9b55bc" rebootRequired="false" hash="389c54da50dbba33d932cce5774753ee5740b14136b46b668a040acfe95b28d2" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell EMC PowerEdge Express Flash P5336 122TB Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="V7V0K" releaseDate="October 08, 2024" vendorVersion="1.0.0" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12184081M/2/Express-Flash-PCIe-SSD_Firmware_V7V0K_WN64_1.0.0_A00_01.EXE" packageID="V7V0K" dateTime="2025-06-20T06:09:44-05:00" hashMD5="ff0d0bd6b0fc797d4026cf5a7ded2787" size="30519424" identifier="79e8dd30-b035-4c3e-936b-8fbd4063e6ae" rebootRequired="false" hash="c06b440f2c4fae81e17b366bc6fd211944fbd7623c5273e7e11e32ba075b001e" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell PowerEdge Express Flash NVMe AGN U.2 Gen 4 Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="D91M0" releaseDate="April 29, 2026" vendorVersion="8.03.16.641" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14581175M/1/Chipset_Driver_D91M0_WN64_8.03.16.641_A00.EXE" packageID="D91M0" dateTime="2026-05-21T11:52:34-05:00" hashMD5="635fef3a843463a80ea1950d7e398811" size="46719744" identifier="a3743bdd-e8cc-40f6-9845-9e249d9e081f" rebootRequired="true" hash="0cfb81aeb69c115aeabecdf4c4a8179d228bde0a69764b4df88eaf1aac97560f" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">AMD SP7 Turin Series Chipset driver</Display>
+    </Name>
+    <ComponentType value="DRVR">
+      <Display lang="en">Driver</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="G34T2" releaseDate="August 19, 2025" vendorVersion="1.4.0" dellVersion="A03" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13526478M/1/Express-Flash-PCIe-SSD_Firmware_G34T2_WN64_1.4.0_A03.EXE" packageID="G34T2" dateTime="2025-08-19T11:39:48-05:00" hashMD5="e51d5e9c91c3685740a83c730b1fb870" size="27989976" identifier="29d4d4e0-9017-497f-b289-2b572a99b2d5" rebootRequired="false" hash="db1a735407fcf6a7eb738bd71eeb6f4fa9ab2aaf4c5a3577ab9a26e19a8a33df" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell EMC PowerEdge Express Flash P5336 Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="D81J3" releaseDate="October 10, 2025" vendorVersion="26.46.3048" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER13710928M/5/Network_Firmware_D81J3_WN64_26.46.3048_A00_03.EXE" packageID="D81J3" dateTime="2025-11-02T20:22:06-06:00" hashMD5="ee66971d32573f8d5d0277398df03dbe" size="41368832" identifier="4bcb91b8-3e6e-4dad-930c-a9c73c32d710" rebootRequired="true" hash="cf62a97dc99d0e46226ecdaf5bd66c4c31890495f238d4a7903f5a48192a5ba3" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">NVIDIA Mellanox Firmware Release 26.46.3048 for the Industry-Standard NVIDIA Mellanox ConnectX-6 LX Ethernet Adapters</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="3T3MK" releaseDate="February 26, 2026" vendorVersion="26.001.03" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14356444M/1/Network_Driver_3T3MK_WN64_26.001.03_A00.EXE" packageID="3T3MK" dateTime="2026-03-27T10:49:11-05:00" hashMD5="02e6fe727ed18c8a074227e1b45243f0" size="346602944" identifier="d2616b66-0e4a-4778-984b-f5982484cde1" rebootRequired="false" hash="fe641d0e739a52c6c824f39342bc57eb06610ecffabf580ed2ac5d6c003e3967" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">NVIDIA Mellanox Windows 64-bit Server OS Drivers for Mellanox ConnectX-4 LX, ConnectX-5, ConnectX-6, ConnectX-7, and ConnectX-8 Adapters</Display>
+    </Name>
+    <ComponentType value="DRVR">
+      <Display lang="en">Driver</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="PJJF1" releaseDate="May 07, 2026" vendorVersion="1.2.0" dellVersion="A03" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14684766M/1/Express-Flash-PCIe-SSD_Firmware_PJJF1_WN64_1.2.0_A03.EXE" packageID="PJJF1" dateTime="2026-06-18T19:18:32-05:00" hashMD5="63fc82b21cc5ab39f92b793963b7ad08" size="29641184" identifier="27851d35-326a-4640-b8a5-ad5366881268" rebootRequired="false" hash="ffd463111baf9519adbf2254abf9974062bee50e2c10151bdb20c0371c623134" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell BM1743 NVME VRI U.2 GEN4 ISE Firmware Maintenance Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="4PW11" releaseDate="March 12, 2026" vendorVersion="1.0.1" dellVersion="A00" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14296308M/1/Express-Flash-PCIe-SSD_Firmware_4PW11_WN64_1.0.1_A00.EXE" packageID="4PW11" dateTime="2026-03-12T19:29:40-05:00" hashMD5="03a2c3b0be95479aca1fc106e151963f" size="29523952" identifier="15109639-b514-45cd-9b29-5fcf37129794" rebootRequired="false" hash="9c4346c44e7a1ec313eea8e5450e450155f85965773a35d0b1f449ef55439998" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PCIe SSD 6600 E3.S ISE Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="4XT8T" releaseDate="January 02, 2025" vendorVersion="1.6.0" dellVersion="A02" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER12287992M/4/Express-Flash-PCIe-SSD_Firmware_4XT8T_WN64_1.6.0_A02_03.EXE" packageID="4XT8T" dateTime="2025-08-19T22:25:15-05:00" hashMD5="09029d1f433eac3a6fbfcad73e712727" size="27769424" identifier="98470ecf-3bc6-4067-8e96-adb544aa69f5" rebootRequired="false" hash="26be519df1de2c9d9c94345877fc29f94bc14b2fedafe413b0ac8ba1847abf6f" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell EMC PowerEdge Express Flash P5316 ISE Firmware Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  <SoftwareComponent schemaVersion="3.0" releaseID="4WN4V" releaseDate="March 25, 2026" vendorVersion="1.1.0" dellVersion="A01" packageType="LW64" xmlGenVersion="1.0.3681" path="FOLDER14428501M/1/Express-Flash-PCIe-SSD_Firmware_4WN4V_WN64_1.1.0_A01.EXE" packageID="4WN4V" dateTime="2026-04-14T14:44:00-05:00" hashMD5="0336a2d5c2ee3873bf7e6ab1aac8e134" size="28538200" identifier="d7ac32a5-7d4c-49d7-83e2-ae186270aaa6" rebootRequired="false" hash="bd34c116babb0ec39ce1452148cc809701e62acd89364fa60cec63c0fc44d1ae" hashAlgorithm="SHA256">
+    <Name>
+      <Display lang="en">Dell Express Flash NVMe PCIe SSD 9550 U.2 and E3.S ISE Firmware Maintenance Release</Display>
+    </Name>
+    <ComponentType value="FRMW">
+      <Display lang="en">Firmware</Display>
+    </ComponentType>
+  </SoftwareComponent>
+  </Manifest>

@@ -1,0 +1,55 @@
+{
+  "upgrade_paths": [
+    {
+      "vendor": "hpe",
+      "model": "DL380 Gen10",
+      "component_type": "bios",
+      "edges": {
+        "1.20": ["1.45"],
+        "1.45": ["2.00"],
+        "2.00": ["2.36"],
+        "2.10": ["2.30"],
+        "2.30": ["2.78"]
+      }
+    },
+    {
+      "vendor": "hpe",
+      "model": "DL380 Gen10",
+      "component_type": "bmc",
+      "edges": {
+        "2.55": ["2.72"]
+      }
+    },
+    {
+      "vendor": "hpe",
+      "model": "DL380 Gen10",
+      "component_type": "raid",
+      "edges": {
+        "6.62": ["7.10"]
+      }
+    }
+  ],
+  "prerequisites": [
+    {
+      "vendor": "hpe",
+      "model": "DL380 Gen10",
+      "target": "bios",
+      "target_version": "2.30",
+      "requires": "bmc",
+      "min_version": "2.72"
+    }
+  ],
+  "incompatibilities": [
+    {
+      "vendor": "hpe",
+      "model": "DL380 Gen10",
+      "component_a": "bios",
+      "version_a": "2.30",
+      "operator_a": "==",
+      "component_b": "raid",
+      "version_b": "6.0",
+      "operator_b": "<",
+      "reason": "BIOS 2.30 incompatible avec toute la branche SmartArray antérieure à 6.0."
+    }
+  ]
+}

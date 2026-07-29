@@ -1,0 +1,8 @@
+{
+  "Name": "HPE ProLiant System ROM",
+  "Command": "ApplyUpdate",
+  "Filename": "HPE_SYSROM_2.36_F.fwpkg",
+  "UpdatableBy": ["Uefi", "Bmc"],
+  "TPMOverride": false,
+  "Targets": ["/redfish/v1/UpdateService/FirmwareInventory/2/"]
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "HPE iLO 5 Firmware",
+  "Command": "ApplyUpdate",
+  "Filename": "HPE_ILO5_2.72_F.fwpkg",
+  "UpdatableBy": ["Bmc"],
+  "TPMOverride": true,
+  "Targets": ["/redfish/v1/UpdateService/FirmwareInventory/1/"]
+}

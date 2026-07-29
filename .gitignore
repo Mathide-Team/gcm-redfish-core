@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Outils
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Éditeurs / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Artefacts locaux d'analyse de catalogue (générés par scripts/)
+dell_catalog_analysis/
+dell_catalog/
+Catalog.xml
+Catalog.xml.gz
