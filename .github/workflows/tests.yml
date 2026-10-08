@@ -2,13 +2,16 @@ name: Tests
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master", "main"]
   pull_request:
-    branches: ["main"]
+    branches: ["master", "main"]
+  workflow_dispatch:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Runners maison (groupe maison, Ubuntu 20.04, root) ; repli GitHub :
+    # variable RUNS_ON_LINUX = '"ubuntu-latest"'.
+    runs-on: ${{ fromJSON(vars.RUNS_ON_LINUX || '{"group":"maison","labels":["self-hosted","linux"]}') }}
     strategy:
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
@@ -16,13 +19,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # uv plutot que setup-python : setup-python ne fournit pas ces
+      # versions pour Ubuntu 20.04 (runners maison), uv si.
+      - name: Installation de uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+
       - name: Installer Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
+        run: |
+          uv venv --python ${{ matrix.python-version }} .venv
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
+          echo "VIRTUAL_ENV=$PWD/.venv" >> "$GITHUB_ENV"
 
       - name: Installer le paquet
-        run: pip install -e ".[dev]"
+        run: uv pip install -e ".[dev]"
 
       - name: Lancer les tests (moteur de dépendances)
         run: python tests/test_engine.py
