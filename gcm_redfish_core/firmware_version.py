@@ -79,7 +79,7 @@ class FirmwareVersion:
         return self._segments == other._segments
 
     def __lt__(self, other: "FirmwareVersion") -> bool:
-        logger.trace("__lt__() called | autre={}", other.raw)
+        logger.trace("__lt__() called | type={}", type(other).__name__)
         if not isinstance(other, FirmwareVersion):
             logger.trace("__lt__() returning | NotImplemented")
             return NotImplemented
