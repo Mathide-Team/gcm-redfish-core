@@ -37,6 +37,8 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 
+from loguru import logger
+
 # Permet d'exécuter le script depuis le dossier qui contient gcm_redfish_core/
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -49,10 +51,14 @@ CATALOG_URL = "https://downloads.dell.com/catalog/Catalog.xml.gz"
 
 
 def local_name(tag: str) -> str:
-    return tag.rsplit("}", 1)[-1]
+    logger.trace("local_name() called")
+    nom = tag.rsplit("}", 1)[-1]
+    logger.trace("local_name() returning | {}", nom)
+    return nom
 
 
 def download_catalog(out_dir: Path) -> Path:
+    logger.debug("download_catalog() called | dossier={}", out_dir)
     gz_path = out_dir / "Catalog.xml.gz"
     xml_path = out_dir / "Catalog.xml"
     print(f"Téléchargement de {CATALOG_URL} ...")
@@ -61,11 +67,13 @@ def download_catalog(out_dir: Path) -> Path:
     with gzip.open(gz_path, "rb") as f_in, open(xml_path, "wb") as f_out:
         shutil.copyfileobj(f_in, f_out)
     print(f"Catalogue complet : {xml_path} ({xml_path.stat().st_size / 1_048_576:.1f} Mo)")
+    logger.debug("download_catalog() returning | {}", xml_path)
     return xml_path
 
 
 def component_fields(element: ET.Element) -> tuple[str, str, str, str]:
     """Retourne (component_type_brut, name, package_id, version)."""
+    logger.debug("component_fields() called")
     component_type = ""
     name = ""
     for child in element:
@@ -79,10 +87,12 @@ def component_fields(element: ET.Element) -> tuple[str, str, str, str]:
                     break
     package_id = element.get("packageID") or element.get("releaseID") or ""
     version = element.get("dellVersion") or element.get("vendorVersion") or ""
+    logger.debug("component_fields() returning | type={} paquet={}", component_type, package_id)
     return component_type, name, package_id, version
 
 
 def analyze(catalog_path: Path, out_dir: Path) -> None:
+    logger.debug("analyze() called | catalogue={} dossier={}", catalog_path, out_dir)
     print(f"Analyse de {catalog_path} ...")
     tree = ET.parse(catalog_path)
     root = tree.getroot()
@@ -142,9 +152,13 @@ def analyze(catalog_path: Path, out_dir: Path) -> None:
     print()
     print(f"Rapport : {out_dir / 'stats.txt'}")
     print(f"XML des non-classés (pour expertise) : {out_dir / 'unclassified_components.xml'}")
+    logger.debug(
+        "analyze() returning | {} composant(s), {} non classé(s)", total, unclassified_total
+    )
 
 
 def main() -> None:
+    logger.debug("main() called")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--catalog-path", type=Path, default=None, help="Chemin vers un Catalog.xml déjà présent"
@@ -164,10 +178,13 @@ def main() -> None:
         args.out_dir.mkdir(parents=True, exist_ok=True)
         catalog_path = download_catalog(args.out_dir)
     else:
+        logger.error("ni --catalog-path ni --download fourni")
         parser.error("Fournis --catalog-path <fichier> ou --download")
+        logger.debug("main() returning | arguments incomplets")
         return
 
     analyze(catalog_path, args.out_dir)
+    logger.debug("main() returning")
 
 
 if __name__ == "__main__":

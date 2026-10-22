@@ -41,3 +41,6 @@ jobs:
 
       - name: Lancer les tests (client Redfish)
         run: python tests/test_redfish_client.py
+
+      - name: Lancer les tests (règles loguru SOCLE §8)
+        run: python tests/test_loguru_regles.py
