@@ -33,6 +33,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
+    "coverage>=7.0",
 ]
 
 [project.urls]
@@ -44,3 +45,14 @@ include = ["gcm_redfish_core", "gcm_redfish_core.*"]
 
 [tool.setuptools.package-data]
 gcm_redfish_core = ["data/*.json", "data/*.xml", "data/hpe_components/*.json"]
+
+# Couverture mesurée sur les scripts de tests/ (lancés tels quels par la CI),
+# lignes et branches, seuil bloquant à 95 % (issue #4).
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["gcm_redfish_core"]
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true

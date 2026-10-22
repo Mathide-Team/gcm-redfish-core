@@ -33,14 +33,27 @@ jobs:
       - name: Installer le paquet
         run: uv pip install -e ".[dev]"
 
+      # Chaque script de tests/ tourne sous coverage (mesures fusionnées
+      # ensuite) ; seuil bloquant de 95 % lignes + branches dans pyproject.toml.
       - name: Lancer les tests (moteur de dépendances)
-        run: python tests/test_engine.py
+        run: coverage run tests/test_engine.py
 
       - name: Lancer les tests (import de catalogues)
-        run: python tests/test_catalog_import.py
+        run: coverage run tests/test_catalog_import.py
 
       - name: Lancer les tests (client Redfish)
-        run: python tests/test_redfish_client.py
+        run: coverage run tests/test_redfish_client.py
+
+      - name: Lancer les tests (client Redfish, chemins d'erreur)
+        run: coverage run tests/test_redfish_client_erreurs.py
+
+      - name: Lancer les tests (moteur et importeurs, cas limites)
+        run: coverage run tests/test_moteur_et_import_limites.py
 
       - name: Lancer les tests (règles loguru SOCLE §8)
-        run: python tests/test_loguru_regles.py
+        run: coverage run tests/test_loguru_regles.py
+
+      - name: Couverture (seuil 95 %, lignes + branches)
+        run: |
+          coverage combine
+          coverage report
