@@ -26,6 +26,8 @@ classifiers = [
 dependencies = [
     "requests>=2.31",
     "urllib3>=2.0",
+    # Journalisation (SOCLE §8) : loguru pour tout le Python de l'équipe.
+    "loguru>=0.7",
 ]
 
 [project.optional-dependencies]

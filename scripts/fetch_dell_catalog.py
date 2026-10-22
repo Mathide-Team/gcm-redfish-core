@@ -20,14 +20,20 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from loguru import logger
+
 URL = "https://downloads.dell.com/catalog/Catalog.xml.gz"
 
 
 def local_name(tag: str) -> str:
-    return tag.rsplit("}", 1)[-1]
+    logger.trace("local_name() called")
+    nom = tag.rsplit("}", 1)[-1]
+    logger.trace("local_name() returning | {}", nom)
+    return nom
 
 
 def main() -> None:
+    logger.debug("main() called")
     parser = argparse.ArgumentParser()
     parser.add_argument("--sample-size", type=int, default=50)
     parser.add_argument("--out", default="./dell_catalog")
@@ -62,6 +68,7 @@ def main() -> None:
 
     ET.ElementTree(sample_root).write(sample_path, encoding="UTF-8", xml_declaration=True)
     print(f"Échantillon prêt à uploader : {sample_path} ({count} composants)")
+    logger.debug("main() returning | {} composant(s)", count)
 
 
 if __name__ == "__main__":

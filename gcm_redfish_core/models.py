@@ -10,6 +10,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from loguru import logger
+
 from .firmware_version import FirmwareVersion
 
 
@@ -64,7 +66,9 @@ class ServerProfile:
     components: dict[str, ComponentState] = field(default_factory=dict)
 
     def current_version(self, component_type: str) -> FirmwareVersion | None:
+        logger.debug("current_version() called | composant={}", component_type)
         state = self.components.get(component_type)
+        logger.debug("current_version() returning | trouvé={}", state is not None)
         return state.current_version if state else None
 
 
@@ -77,18 +81,33 @@ class Repository:
     """
 
     def __init__(self, packages: list[FirmwarePackage] | None = None) -> None:
+        logger.debug("Repository.__init__() called | {} paquet(s)", len(packages or []))
         self._packages: list[FirmwarePackage] = list(packages or [])
+        logger.debug("Repository.__init__() returning")
 
     def add(self, package: FirmwarePackage) -> None:
+        logger.debug(
+            "Repository.add() called | composant={} version={}",
+            package.component_type,
+            package.version.raw,
+        )
         self._packages.append(package)
+        logger.debug("Repository.add() returning | {} paquet(s) au total", len(self._packages))
 
     def available_versions(self, component_type: str) -> list[FirmwarePackage]:
         """Paquets disponibles pour un composant, triés par version croissante."""
+        logger.debug("available_versions() called | composant={}", component_type)
         matches = [p for p in self._packages if p.component_type == component_type]
+        logger.debug("available_versions() returning | {} paquet(s)", len(matches))
         return sorted(matches, key=lambda p: p.version)
 
     def find(self, component_type: str, version: FirmwareVersion) -> FirmwarePackage | None:
+        logger.debug(
+            "Repository.find() called | composant={} version={}", component_type, version.raw
+        )
         for pkg in self._packages:
             if pkg.component_type == component_type and pkg.version == version:
+                logger.debug("Repository.find() returning | paquet={}", pkg.package_id)
                 return pkg
+        logger.debug("Repository.find() returning | None")
         return None

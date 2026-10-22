@@ -35,6 +35,8 @@ import xml.etree.ElementTree as ET
 from abc import ABC, abstractmethod
 from pathlib import Path
 
+from loguru import logger
+
 from .firmware_version import FirmwareVersion
 from .models import FirmwarePackage, Repository
 
@@ -93,13 +95,19 @@ def is_confident_dell_classification(component_type: str) -> bool:
 
 def _local_name(tag: str) -> str:
     """Retire le préfixe de namespace XML éventuel (ex. '{ns}Tag' -> 'Tag')."""
-    return tag.rsplit("}", 1)[-1]
+    logger.trace("_local_name() called")
+    nom = tag.rsplit("}", 1)[-1]
+    logger.trace("_local_name() returning | {}", nom)
+    return nom
 
 
 def _find_child_text(element: ET.Element, *names: str) -> str | None:
+    logger.trace("_find_child_text() called | {} nom(s)", len(names))
     for child in element:
         if _local_name(child.tag) in names and child.text:
+            logger.trace("_find_child_text() returning | texte trouvé")
             return child.text.strip()
+    logger.trace("_find_child_text() returning | None")
     return None
 
 
@@ -108,19 +116,27 @@ def classify_dell_component(component_type_value: str, display_name: str) -> str
 
     Heuristique best-effort : à valider/étendre contre un catalogue réel.
     """
+    logger.debug(
+        "classify_dell_component() called | type={} nom={}",
+        component_type_value,
+        display_name,
+    )
     normalized_type = (component_type_value or "").strip().lower()
     if normalized_type in _DELL_COMPONENT_TYPE_MAP:
+        logger.debug("classify_dell_component() returning | {} (table)", _DELL_COMPONENT_TYPE_MAP[normalized_type])
         return _DELL_COMPONENT_TYPE_MAP[normalized_type]
 
     name_lower = (display_name or "").lower()
     for keyword, component_type in _DELL_NAME_KEYWORDS:
         if keyword in name_lower:
+            logger.debug("classify_dell_component() returning | {} (mot-clé {})", component_type, keyword)
             return component_type
 
     # Repli : on garde la valeur brute Dell plutôt que de la perdre, quitte
     # à ce qu'elle ne corresponde à aucune règle de la Knowledge Base (le
     # moteur la traitera alors comme "aucune règle connue", ce qui est le
     # comportement sûr par défaut).
+    logger.debug("classify_dell_component() returning | repli sur la valeur brute")
     return normalized_type or "unknown"
 
 
@@ -139,9 +155,11 @@ class CatalogImporter(ABC):
         Returns:
             Le nombre de paquets ajoutés.
         """
+        logger.debug("populate() called | chemin={}", path)
         packages = self.parse(path)
         for package in packages:
             repository.add(package)
+        logger.debug("populate() returning | {} paquet(s)", len(packages))
         return len(packages)
 
 
@@ -180,6 +198,7 @@ class HPESmartComponentImporter(CatalogImporter):
     )
 
     def parse(self, path: str | Path) -> list[FirmwarePackage]:
+        logger.debug("HPESmartComponentImporter.parse() called | chemin={}", path)
         path = Path(path)
         json_files = [path] if path.is_file() else sorted(path.glob("*.json"))
         packages: list[FirmwarePackage] = []
@@ -188,10 +207,12 @@ class HPESmartComponentImporter(CatalogImporter):
             data = json.loads(json_file.read_text(encoding="utf-8"))
             filename = data.get("Filename") or data.get("Name")
             if not filename:
+                logger.debug("métadonnée incomplète ignorée : {}", json_file.name)
                 continue  # métadonnée incomplète, on ignore plutôt que deviner
 
             version_raw = self._guess_version(filename)
             if version_raw is None:
+                logger.debug("version non identifiable, composant ignoré : {}", filename)
                 continue  # pas de version fiable identifiable : on n'invente pas
 
             updatable_by = tuple(data.get("UpdatableBy") or ())
@@ -207,14 +228,19 @@ class HPESmartComponentImporter(CatalogImporter):
                     updatable_by=updatable_by,
                 )
             )
+        logger.debug("HPESmartComponentImporter.parse() returning | {} paquet(s)", len(packages))
         return packages
 
     @classmethod
     def _guess_version(cls, filename: str) -> str | None:
+        logger.debug("_guess_version() called | fichier={}", filename)
         match = cls._VERSION_IN_FILENAME_RE.search(filename)
         if not match:
+            logger.debug("_guess_version() returning | None (aucune version dans le nom)")
             return None
-        return match.group(1).replace("_", ".")
+        version = match.group(1).replace("_", ".")
+        logger.debug("_guess_version() returning | {}", version)
+        return version
 
 
 _HPE_NAME_KEYWORDS = [
@@ -239,10 +265,13 @@ def classify_hpe_component(display_name: str) -> str:
     Heuristique best-effort (aucun champ ``ComponentType`` structuré n'est
     confirmé dans les métadonnées HPE) : à affiner contre des exemples réels.
     """
+    logger.debug("classify_hpe_component() called | nom={}", display_name)
     name_lower = (display_name or "").lower()
     for keyword, component_type in _HPE_NAME_KEYWORDS:
         if keyword in name_lower:
+            logger.debug("classify_hpe_component() returning | {} (mot-clé {})", component_type, keyword)
             return component_type
+    logger.debug("classify_hpe_component() returning | unknown")
     return "unknown"
 
 
@@ -279,10 +308,17 @@ def classify_lenovo_component(component_id: str, display_name: str) -> str:
     XClarity n'a encore été utilisé pour valider ces mots-clés, contrairement
     à Dell et HPE) : à corriger dès qu'un vrai export est disponible.
     """
+    logger.debug(
+        "classify_lenovo_component() called | identifiant={} nom={}",
+        component_id,
+        display_name,
+    )
     combined = f"{component_id} {display_name}".lower()
     for keyword, component_type in _LENOVO_NAME_KEYWORDS:
         if keyword in combined:
+            logger.debug("classify_lenovo_component() returning | {} (mot-clé {})", component_type, keyword)
             return component_type
+    logger.debug("classify_lenovo_component() returning | unknown")
     return "unknown"
 
 
@@ -296,6 +332,7 @@ class DellCatalogImporter(CatalogImporter):
     vendor = "dell"
 
     def parse(self, path: str | Path) -> list[FirmwarePackage]:
+        logger.debug("DellCatalogImporter.parse() called | chemin={}", path)
         tree = ET.parse(path)
         root = tree.getroot()
         packages: list[FirmwarePackage] = []
@@ -307,6 +344,7 @@ class DellCatalogImporter(CatalogImporter):
             package_id = element.get("packageID") or element.get("releaseID")
             version_raw = element.get("dellVersion") or element.get("vendorVersion")
             if not package_id or not version_raw:
+                logger.debug("entrée SoftwareComponent incomplète ignorée")
                 continue  # entrée incomplète, on ignore plutôt que de deviner
 
             component_type_el = None
@@ -336,4 +374,5 @@ class DellCatalogImporter(CatalogImporter):
                     estimated_minutes=15,
                 )
             )
+        logger.debug("DellCatalogImporter.parse() returning | {} paquet(s)", len(packages))
         return packages

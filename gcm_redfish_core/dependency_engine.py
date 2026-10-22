@@ -19,6 +19,8 @@ from collections import deque
 from dataclasses import dataclass, field
 from enum import Enum
 
+from loguru import logger
+
 from .firmware_version import FirmwareVersion
 from .knowledge_base import KnowledgeBase
 from .models import Repository, ServerProfile
@@ -85,6 +87,7 @@ class UpdatePlan:
         return not self.requires_manual_validation
 
     def summary(self) -> str:
+        logger.debug("summary() called | {} étape(s), {} problème(s)", len(self.steps), len(self.issues))
         lines = [
             f"Plan pour {self.server_model} : {len(self.steps)} étape(s), "
             f"{self.total_reboots} redémarrage(s), ~{self.total_estimated_minutes} min",
@@ -98,6 +101,7 @@ class UpdatePlan:
             lines.append(f"  [{issue.severity.value}] {issue.component_type}: {issue.message}")
         if not self.is_safe_to_execute:
             lines.append("  => VALIDATION MANUELLE REQUISE avant exécution.")
+        logger.debug("summary() returning | {} ligne(s)", len(lines))
         return "\n".join(lines)
 
 
@@ -105,8 +109,10 @@ class DependencyEngine:
     """Calcule un plan de mise à jour sûr à partir d'une Knowledge Base."""
 
     def __init__(self, knowledge_base: KnowledgeBase, repository: Repository) -> None:
+        logger.debug("DependencyEngine.__init__() called")
         self._kb = knowledge_base
         self._repo = repository
+        logger.debug("DependencyEngine.__init__() returning")
 
     # ------------------------------------------------------------------
     # Chemin de mise à jour pour un seul composant
@@ -119,9 +125,17 @@ class DependencyEngine:
         current: FirmwareVersion,
         target: FirmwareVersion,
     ) -> tuple[list[Step], list[PlanIssue]]:
+        logger.debug(
+            "_component_path() called | modèle={} composant={} {} -> {}",
+            model,
+            component_type,
+            current,
+            target,
+        )
         issues: list[PlanIssue] = []
 
         if current == target:
+            logger.debug("_component_path() returning | déjà à jour, 0 étape")
             return [], issues
 
         graph_raw = self._kb.upgrade_graph(vendor, model, component_type)
@@ -134,6 +148,7 @@ class DependencyEngine:
                     f"({current} -> {target}) : chemin non garanti, validation requise.",
                 )
             )
+            logger.debug("_component_path() returning | 0 étape, problème MANUAL_REVIEW (graphe inconnu)")
             return [], issues
 
         # Construit le graphe en objets FirmwareVersion pour une comparaison
@@ -146,9 +161,12 @@ class DependencyEngine:
                 nodes.setdefault(dst, FirmwareVersion(dst))
 
         def find_node(v: FirmwareVersion) -> str | None:
-            for key, val in nodes.items():
+            logger.trace("find_node() called | version={}", v)
+            for nom, val in nodes.items():
                 if val == v:
-                    return key
+                    logger.trace("find_node() returning | nom={}", nom)
+                    return nom
+            logger.trace("find_node() returning | None")
             return None
 
         start_key = find_node(current)
@@ -164,6 +182,7 @@ class DependencyEngine:
                     "chemin non garanti, validation requise.",
                 )
             )
+            logger.debug("_component_path() returning | 0 étape, problème MANUAL_REVIEW (version hors graphe)")
             return [], issues
 
         # BFS (chemin le plus court en nombre de paliers).
@@ -189,6 +208,7 @@ class DependencyEngine:
                     f"pour {component_type} sur {model}.",
                 )
             )
+            logger.debug("_component_path() returning | 0 étape, problème BLOCKING (cible non atteignable)")
             return [], issues
 
         # Reconstruction du chemin.
@@ -229,6 +249,7 @@ class DependencyEngine:
                     estimated_minutes=estimated_minutes,
                 )
             )
+        logger.debug("_component_path() returning | {} étape(s), {} problème(s)", len(steps), len(issues))
         return steps, issues
 
     # ------------------------------------------------------------------
@@ -247,6 +268,11 @@ class DependencyEngine:
             Un ``UpdatePlan`` ordonné avec les problèmes détectés. Ne
             lance jamais aucune action réelle.
         """
+        logger.debug(
+            "plan_update() called | serveur={} {} cible(s)",
+            profile.model,
+            len(targets),
+        )
         plan = UpdatePlan(server_model=f"{profile.vendor} {profile.model}")
         component_chains: dict[str, list[Step]] = {}
 
@@ -276,15 +302,24 @@ class DependencyEngine:
         # Incompatibilités sur l'état final.
         self._check_incompatibilities(profile, targets, plan)
 
+        logger.debug(
+            "plan_update() returning | {} étape(s), {} problème(s)",
+            len(plan.steps),
+            len(plan.issues),
+        )
         return plan
 
     def _final_version(
         self, profile: ServerProfile, component_type: str, chains: dict[str, list[Step]]
     ) -> FirmwareVersion | None:
+        logger.debug("_final_version() called | composant={}", component_type)
         chain = chains.get(component_type)
         if chain:
+            logger.debug("_final_version() returning | fin de chaîne")
             return chain[-1].to_version
-        return profile.current_version(component_type)
+        version = profile.current_version(component_type)
+        logger.debug("_final_version() returning | version du profil")
+        return version
 
     def _order_with_prerequisites(
         self,
@@ -292,6 +327,9 @@ class DependencyEngine:
         chains: dict[str, list[Step]],
         plan: UpdatePlan,
     ) -> list[Step]:
+        logger.debug(
+            "_order_with_prerequisites() called | {} chaîne(s)", len(chains)
+        )
         # Représente chaque étape par un identifiant unique (component, index).
         node_ids: list[tuple[str, int]] = [
             (comp, i) for comp, steps in chains.items() for i in range(len(steps))
@@ -356,7 +394,9 @@ class DependencyEngine:
                 ordered.append(n)
                 remaining.discard(n)
 
-        return [chains[comp][i] for comp, i in ordered]
+        etapes = [chains[comp][i] for comp, i in ordered]
+        logger.debug("_order_with_prerequisites() returning | {} étape(s)", len(etapes))
+        return etapes
 
     def _check_incompatibilities(
         self,
@@ -364,6 +404,7 @@ class DependencyEngine:
         targets: dict[str, FirmwareVersion],
         plan: UpdatePlan,
     ) -> None:
+        logger.debug("_check_incompatibilities() called | {} cible(s)", len(targets))
         finals: dict[str, FirmwareVersion] = {}
         for comp in set(list(targets.keys()) + list(profile.components.keys())):
             current = profile.current_version(comp)
@@ -379,3 +420,4 @@ class DependencyEngine:
                         f"avec {rule.component_b} {rule.constraint_b}. {rule.reason}".strip(),
                     )
                 )
+        logger.debug("_check_incompatibilities() returning | {} version(s) finale(s)", len(finals))
